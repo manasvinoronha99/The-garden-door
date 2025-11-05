@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garden Door</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Introduction Screen -->
+    <div id="intro-screen" class="screen active">
+        <div class="intro-content">
+            <h1 class="title">The Garden Door</h1>
+            <p class="subtitle">Tend a surreal garden where each plant you water grows into a doorway leading to a memory or alternate life.</p>
+            <p class="instruction">Every action changes the garden's mood and color.</p>
+            <button id="start-btn" class="btn-primary">Enter the Garden</button>
+        </div>
+    </div>
+
+    <!-- Main Garden Screen -->
+    <div id="garden-screen" class="screen">
+        <div class="garden-container">
+            <!-- Header -->
+            <header class="garden-header">
+                <h2>Your Garden</h2>
+                <div class="garden-stats">
+                    <span class="stat">
+                        <span class="stat-label">Nurtured:</span>
+                        <span id="nurtured-count">0</span>
+                    </span>
+                    <span class="stat">
+                        <span class="stat-label">Neglected:</span>
+                        <span id="neglected-count">0</span>
+                    </span>
+                    <span class="stat">
+                        <span class="stat-label">Doors Entered:</span>
+                        <span id="doors-count">0</span>
+                    </span>
+                </div>
+            </header>
+
+            <!-- Garden Area -->
+            <div class="garden-area" id="garden-area">
+                <!-- Time of Day Overlay -->
+                <div class="time-overlay" id="time-overlay"></div>
+
+                <!-- Background Elements -->
+                <div class="background-elements">
+                    <div class="sky"></div>
+                    <div class="ground"></div>
+                </div>
+
+                <!-- Plants Container -->
+                <div class="plants-container" id="plants-container">
+                    <!-- Plants will be dynamically generated -->
+                </div>
+
+                <!-- Vines and Ambient Elements -->
+                <div class="ambient-elements" id="ambient-elements">
+                    <!-- Decorative vines that grow over time -->
+                </div>
+            </div>
+
+            <!-- Interaction Panel -->
+            <div class="interaction-panel" id="interaction-panel">
+                <div class="panel-content">
+                    <h3 id="panel-title">Select a plant</h3>
+                    <p id="panel-description">Hover over a plant to see your options</p>
+                    <div class="action-buttons" id="action-buttons">
+                        <!-- Buttons appear when plant is selected -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tooltip -->
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+    </div>
+
+    <!-- Memory/Door Screen -->
+    <div id="memory-screen" class="screen">
+        <div class="memory-content">
+            <div class="memory-visual">
+                <div class="door-frame">
+                    <div class="door-vines"></div>
+                    <div class="door-portal" id="door-portal"></div>
+                </div>
+            </div>
+            <div class="memory-text">
+                <h2 id="memory-title">A Memory Unfolds</h2>
+                <p id="memory-description"></p>
+                <button id="return-btn" class="btn-primary">Return to Garden</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Outcome Screen -->
+    <div id="outcome-screen" class="screen">
+        <div class="outcome-content">
+            <h1 id="outcome-title">Your Garden's Story</h1>
+            <div class="outcome-visual" id="outcome-visual">
+                <!-- Visual representation of final garden state -->
+            </div>
+            <p id="outcome-description"></p>
+            <div class="outcome-stats">
+                <div class="outcome-stat">
+                    <span class="stat-number" id="final-nurtured">0</span>
+                    <span class="stat-label">Plants Nurtured</span>
+                </div>
+                <div class="outcome-stat">
+                    <span class="stat-number" id="final-neglected">0</span>
+                    <span class="stat-label">Plants Neglected</span>
+                </div>
+                <div class="outcome-stat">
+                    <span class="stat-number" id="final-doors">0</span>
+                    <span class="stat-label">Doors Entered</span>
+                </div>
+            </div>
+            <button id="restart-btn" class="btn-primary">Begin Again</button>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <div class="audio-container">
+        <audio id="ambient-audio" loop>
+            <!-- Ambient sounds will be controlled via Web Audio API -->
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
