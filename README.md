@@ -2,6 +2,10 @@
 
 An interactive narrative garden experience where each click or hover interaction with plants triggers visual and auditory feedback. Tend your garden, watch it transform, and discover doors to memories.
 
+## 🌐 Live Demo
+
+**Play now:** [https://manasvinoronha99.github.io/The-garden-door/](https://manasvinoronha99.github.io/The-garden-door/)
+
 ![The Garden Door Concept](./the%20garden%20door%20lo-fi.png)
 
 ## 🌱 Concept
