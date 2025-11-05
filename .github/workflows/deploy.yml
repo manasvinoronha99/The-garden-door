@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - claude/integrate-uploaded-visuals-011CUqUy41fDGPZk5ENbu946
   workflow_dispatch:
 
 permissions:
